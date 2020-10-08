@@ -7,11 +7,36 @@
 }
 
 header{ 
-    padding: 40px;
+    width: 100%;
+    height: 80px;
     border-bottom: 2.5px solid white;
     background: rgba(0, 0, 0, 0.5);
     line-height: initial;
 }
+
+.imagem-esquerda{
+    float: left;
+    margin-left: 20px;
+    width: 35px;
+
+}
+.imagem-direita{
+    float: right;
+    width: 25px;
+    margin-right: 20px;
+}
+
+.cabecalho img{
+    padding: 20px;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: transform .5s ease;
+}
+
+.cabecalho:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 body{
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
