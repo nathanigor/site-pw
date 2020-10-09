@@ -8,29 +8,21 @@
 
 header{ 
     width: 100%;
-    height: 80px;
+    height: 70px;
     border-bottom: 2.5px solid white;
     background: rgba(0, 0, 0, 0.5);
-    line-height: initial;
 }
 
-
-.cabecalho{
-    margin-right: 20px;
-
-}
-
-.imagem-esquerda{
+.imagem-esquerda img{
     float: left;
-    padding-left: 20px;
+    margin-left: 50px;
     width: 35px;
 
 }
-
 .imagem-direita{
     float: right;
     width: 25px;
-    padding-right: 20px;
+    margin-right: 50px;
 }
 
 .cabecalho img{
@@ -39,13 +31,67 @@ header{
     transition: transform .5s ease;
 }
 
-.cabecalho:hover img{
+.cabecalho:hover img:hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
- }
+}
 
 body{
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
+}
+
+.box-categoria{
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box-categoria h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.box-categoria img{
+    padding-top: 10px;
+    width: 50px;
+}
+
+.categorias{
+    width: 490px;
+    height: 370px;
+    display: flex;
+    padding: 40px;
+    background-color: whitesmoke;
+    border: 1.5px solid silver;
+    border-radius: 8px;
+    margin: 0 auto;
+
+}
+
+.box{
+    width: 50px;
+    height: 80px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.box img{
+    padding: 10px;
+    width: 120px;
+    display: flex;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: transform.5s ease;
+    padding-bottom: 30px;
+
+}
+
+.box img:hover{
+    -webkit-transform: scale(0.1);
+    transform: scale(1.05);
+ }
+
+.img1{
+    height: 130px;
 }
