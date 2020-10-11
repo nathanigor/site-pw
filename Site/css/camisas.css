@@ -37,15 +37,10 @@ header{
 }
 
 body{
-    
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
 
-}
-
-.box-categoria h1{
-    padding-bottom: 10px;
 }
 
 .info img{
@@ -53,58 +48,55 @@ body{
     padding-top: 10px;
     width: 100%;
     height: 50px;
+
 }
 .info{
     text-align: center;
 
 }
-
-.categorias{
+.box-categoria{
+    width: 650px;
     margin: 0 auto;
-    height: 370px;
-    display: flex;
-    padding: 40px;
-    background-color: whitesmoke;
-    border: 1.5px solid silver;
-    border-radius: 8px;
-}
 
-.box{
-    width: 50px;
-    height: 80px;
-    flex: 1;
+
+}
+.camisas{
+    display: flex;
     flex-wrap: wrap;
 }
 
-.box img{
-    width: 120px;
-    display: flex;
-    -webkit-transition: -webkit-transform .4s ease;
-    transition: transform.5s ease;
-    padding-bottom: 30px;
+.camisa{
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
-.box img:hover{
+.camisa img{
+    width: 300px;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: transform.5s ease;
+    border: 1.5px solid;
+    border-radius: 8px;
+}
+
+.camisa img:hover, .info img:hover{
     -webkit-transform: scale(0.1);
     transform: scale(1.05);
  }
 
-.img3{
-    height: 130px;
-}
-
-.img5{
-    height: 130px;
-}
-
-@media only screen and (max-width: 400px) {
-    .categorias{
-        padding: 0px;
-        padding-top: 30px;
+@media only screen and (max-width: 700px) {
+    .info{
         margin: 0 auto;
     }
-    .icone img{
-        height: 20px;
+
+    .info h1{
+        padding-left: 6px;
+    }
+
+    .box-categoria{
+        width: 310px;
+        margin: 0 auto;    
     }
     .imagem-direita{
         margin-right: 20px
@@ -112,11 +104,13 @@ body{
     .imagem-esquerda img{
         margin-left: 0px;
     }
-}
 
-@media only screen and (min-width: 601px) {
+    .icone img{
+        height: 50px;
+    }
 
-  .categorias{
-      width: 350px;
-  }
+    .camisa img{
+        width: 300px;
+    }
+
 }
