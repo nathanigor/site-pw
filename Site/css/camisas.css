@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header{
+    height: 70px;
+    border-bottom: 2.5px solid white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.imagem-esquerda img{
+    float: left;
+    margin-left: 50px;
+    width: 35px;
+
+}
+
+.imagem-direita{
+    float: right;
+    width: 25px;
+    margin-right: 50px;
+}
+
+.cabecalho img{
+    padding: 20px;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: transform .5s ease;
+}
+
+.cabecalho:hover img:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+body{
+    background-color: #1a1a2e;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+
+}
+
+.info img{
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 50px;
+}
+.info{
+    text-align: center;
+
+}
+.box-categoria{
+    width: 650px;
+    margin: 0 auto;
+
+
+}
+.camisas{
+    display: flex;
+    flex-wrap: wrap;
+}
+.camisa{
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+}
+.camisa img{
+    width: 300px;
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: transform.5s ease;
+    border: 1.5px solid;
+    border-radius: 8px;
+}
+
+.camisa img:hover{
+    -webkit-transform: scale(0.1);
+    transform: scale(1.05);
+ }
+
+@media only screen and (max-width: 700px) {
+    .info{
+        margin: 0 auto;
+    }
+
+    .info h1{
+        padding-left: 6px;
+    }
+
+    .box-categoria{
+        width: 310px;
+        margin: 0 auto;    
+    }
+
+    .info img{
+        width: 0px;
+    }
+
+    .camisa{
+        padding-bottom: 20px;
+    }
+
+    .camisa img{
+        width: 300px;
+    }
+
+}
