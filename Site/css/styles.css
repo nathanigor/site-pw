@@ -89,7 +89,11 @@ body{
     transform: scale(1.05);
  }
 
-.img1{
+.img3{
+    height: 130px;
+}
+
+.img5{
     height: 130px;
 }
 
@@ -101,6 +105,12 @@ body{
     }
     .info img{
         width: 0px;
+    }
+    .imagem-direita{
+        margin-right: 20px
+    }
+    .imagem-esquerda img{
+    margin-left: 0px;
     }
 }
 
