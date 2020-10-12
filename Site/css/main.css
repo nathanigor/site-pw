@@ -29,8 +29,10 @@ a {
 header{ 
     height: 70px;
     border-bottom: 2.5px solid white;
-    background: rgba(0, 0, 0, 0.5);
-    line-height: initial;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 nav{  
@@ -42,7 +44,10 @@ header li {
     margin: 0 auto;
 }
 
+
 .hero-image{
+    padding-top: 70px;
+
     color: #fff;
     display: flex;
     justify-content: center;
@@ -83,4 +88,9 @@ footer{
     .hero-image{
         justify-content: left;
     }
-  }
+}
+
+
+ i{
+    margin: 10px;
+}
