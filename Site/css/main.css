@@ -44,7 +44,6 @@ header li {
     margin: 0 auto;
 }
 
-
 .hero-image{
     padding-top: 70px;
 
@@ -88,9 +87,4 @@ footer{
     .hero-image{
         justify-content: left;
     }
-}
-
-
- i{
-    margin: 10px;
-}
+  }
