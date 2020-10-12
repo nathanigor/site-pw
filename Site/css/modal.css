@@ -103,3 +103,30 @@ input {
 
     }
 }
+
+.modal-tamanho{
+    display: flex;
+   padding-left: 35px;
+}
+.modal-valor{
+    text-align: center;
+}
+
+#comprar{
+    margin-top: 35px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: #32cd32;
+    border-radius: 8px;
+    transition: 200ms;
+    font-size: 1.2em;
+}
+
+#comprar:hover{
+    background-color: #11b811;
+    cursor: pointer;
+    
+}
