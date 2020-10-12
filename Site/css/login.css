@@ -10,8 +10,7 @@ header{
     width: 100%;
     height: 70px;
     border-bottom: 2.5px solid white;
-    background: rgba(0, 0, 0, 0.5);
-    line-height: initial;
+    background-color: black;
 }
 
 .imagem-esquerda img{
@@ -41,6 +40,7 @@ body{
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
+    display: inline;
 }
 .box-caixa{
     height: 500px;
@@ -62,6 +62,7 @@ body{
 }
 
 .box-login, .box-cadastro{
+    
     width: 330px;
     margin: -0 auto;
 }
