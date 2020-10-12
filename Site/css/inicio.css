@@ -102,6 +102,23 @@ body{
     transform: scale(1.05);
  }
 
+ footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    border-top: 2.5px solid white;
+    color: #fff;
+    background-color: #000000;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
 @media only screen and (max-width: 700px) {
 
     .info{
@@ -114,10 +131,13 @@ body{
     }
 
     .imagem-direita{
+        margin-top: -4px;
         margin-right: 20px
     }
 
     .imagem-esquerda img{
+        margin-top: -5px;
+
         margin-left: 0px;
     }
 
