@@ -10,9 +10,7 @@ header{
     height: 70px;
     border-bottom: 2.5px solid white;
     background-color: black;
-    position: fixed;
     width: 100%;
-    z-index: 10;
 }
 
 .imagem-esquerda img{
@@ -21,7 +19,6 @@ header{
     width: 35px;
 
 }
-
 .imagem-direita{
     float: right;
     width: 25px;
@@ -43,6 +40,7 @@ body{
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
+    
 }
 
 .box-categoria{
@@ -61,7 +59,6 @@ body{
 
 .info{
     text-align: center;
-
 }
 
 .categorias{
@@ -72,6 +69,10 @@ body{
     background-color: whitesmoke;
     border: 1.5px solid silver;
     border-radius: 8px;
+    
+}
+.box-categoria {
+    padding-top: 10px;
 }
 
 .box{
@@ -94,13 +95,28 @@ body{
     transform: scale(1.05);
  }
 
-.img3{
+.img3, .img5{
     height: 130px;
 }
 
-.img5{
-    height: 130px;
+footer{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    border-top: 2.5px solid white;
+    color: #fff;
+    background-color: #000000;
 }
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
 
 @media only screen and (max-width: 400px) {
     .categorias{
@@ -117,11 +133,15 @@ body{
     .imagem-esquerda img{
         margin-left: 0px;
     }
+    footer{
+
+    }
 }
 
 @media only screen and (min-width: 601px) {
 
-  .categorias{
+.categorias{
       width: 350px;
-  }
+  
+}
 }
