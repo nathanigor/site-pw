@@ -42,6 +42,7 @@ header li {
     margin: 0 auto;
 }
 
+
 .hero-image{
     color: #fff;
     display: flex;
@@ -83,4 +84,9 @@ footer{
     .hero-image{
         justify-content: left;
     }
-  }
+}
+
+
+ i{
+    margin: 10px;
+}
