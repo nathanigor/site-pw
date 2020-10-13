@@ -60,6 +60,10 @@ header li {
     color: #fff;
 }
 
+.sobre h1, h2, p{
+ padding-bottom: 10px;
+}
+
 footer{
     display: flex;
     align-items: center;
@@ -70,9 +74,6 @@ footer{
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
-}
-.sobre h1, h2, p{
- padding-bottom: 10px;
 }
 
 @media only screen and (max-width: 601px) {
