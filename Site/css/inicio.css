@@ -161,12 +161,10 @@ footer a{
     
     .box{
         width: 380px;
-        margin: 0 auto;
     }
     .hero-image img{
-        width: 380px;
-    }
-    .hero-image{
-        justify-content: left;
+        width: 350px;
+        margin: 0 auto;
+
     }
   }
