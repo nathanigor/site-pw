@@ -50,6 +50,15 @@ body{
     color: whitesmoke;
 }
 
+.info{
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.info img{
+    width: 60px;
+}
+
 .box-caixa{
     height: 400px;
     margin: 0 auto;
@@ -60,13 +69,16 @@ body{
     margin: 0 auto;
 
 }
-.info h1{
+
+h1{
     margin: 15px;
 }
+
 .contato p {
     text-align: left;
     margin-bottom: 10px;
 }
+
 .nome, .email, .fone{
     width: 93%;
     padding: 10px;
@@ -89,7 +101,7 @@ body{
 }
 
 footer{
-    margin-top: 100px;
+    margin-top: 240px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -116,8 +128,7 @@ footer a{
     .cabecalho img{
         padding: 10px;
     }
-
-    footer{
-        margin-top: 160px;
+    .info img{
+        width: 40px;
     }
 }
