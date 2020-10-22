@@ -6,6 +6,11 @@
     border: 0;
 }
 
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 header{
     height: 70px;
     border-bottom: 2.5px solid white;
@@ -45,18 +50,39 @@ body{
     color: whitesmoke;
 }
 
-.box{
-    width: 650px;
+/* .box{
     margin: 0 auto;
-}
+} */
 
 .hero-image{
-    padding-top: 70px;
-    color: #fff;
+    background:url('../img/hero-image.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
+}
+
+.hero-image h1{
+    font-size: 3.2rem;
+    margin-bottom: 4px;
+    margin-top: 75px;
+}
+
+.hero-image h3{
+    font-size: 2rem;
+    margin-bottom: 85px;
+}
+
+.hero-image .btn{
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px 50px;
+    color: #1a1a2e;
+    text-transform: uppercase;
 }
 
 .info img{
@@ -66,12 +92,13 @@ body{
 }
 
 .info{
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .box-categoria{
     width: 650px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .box-categoria h1{
@@ -88,7 +115,6 @@ body{
     text-align: center;
     width: 300px;
     padding: 10px;
-    padding-bottom: 20px;
 }
 
 .camisa img{
@@ -128,7 +154,7 @@ footer a{
     }
 
     .box-categoria{
-        width: 310px;
+        width: 320px;
         margin: 0 auto;    
     }
 
@@ -152,19 +178,36 @@ footer a{
     }
 
     .camisa img{
-        width: 300px;
+        width: 290px;
     }
 
 }
 
-@media only screen and (max-width: 601px) {
-    
+@media only screen and (max-width: 700px) {
     .box{
-        width: 380px;
+        width: 100vw;
     }
-    .hero-image img{
-        width: 350px;
-        margin: 0 auto;
+}
 
+@media only screen and (max-width: 380px) {
+     .hero-image{
+        width: 100vw;
     }
-  }
+
+    .box{
+        width: 100vw;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .box, footer{
+        width: 320px;
+    }
+
+    .hero-image{
+       width: 100%;
+    }
+
+}
+
