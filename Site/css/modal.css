@@ -3,7 +3,7 @@ h3{
     color: whitesmoke;
     text-align: center;
     margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 label{
@@ -18,7 +18,7 @@ input {
     border: 0;
     outline: none;
     border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     color: #1a1a2e;
 }
 
@@ -114,7 +114,7 @@ input {
 
 #comprar{
     margin-top: 35px;
-    width: 180px;
+    width: 150px;
     height: 50px;
     border: none;
     outline: none;
@@ -122,11 +122,35 @@ input {
     background-color: #32cd32;
     border-radius: 8px;
     transition: 200ms;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #comprar:hover{
     background-color: #11b811;
     cursor: pointer;
     
+}
+
+#IrParaCategorias {
+    margin-top: 35px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: #ff802b;
+    border-radius: 8px;
+    transition: 200ms;
+    font-size: 1.5em;
+}
+
+#IrParaCategorias:hover{
+    background-color: #e27125;
+    cursor: pointer;
+    
+}
+
+#modalButtons{
+    display: flex;
+    justify-content: space-around;
 }
