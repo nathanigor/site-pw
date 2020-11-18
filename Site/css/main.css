@@ -2,15 +2,15 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
 }
 
 body {
     background-color: #1a1a2e;
-
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
 }
+
 .box{
     width: 960px;
     margin: 0 auto;
@@ -20,7 +20,7 @@ nav, ul{
     list-style: none;
 }
 
-a {
+a{
     text-decoration: none;
     cursor: pointer;
     color: whitesmoke;
@@ -46,7 +46,6 @@ header li {
 
 .hero-image{
     padding-top: 70px;
-
     color: #fff;
     display: flex;
     justify-content: center;
@@ -64,16 +63,14 @@ header li {
  padding-bottom: 10px;
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#footer{
+    text-align: center;
     width: 100%;
-    bottom: 0;
-    height: 70px;
+    height: 50px;
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 601px) {

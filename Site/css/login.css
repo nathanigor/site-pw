@@ -6,19 +6,21 @@
     border: 0;
 }
 
-header{ 
-    width: 100%;
+header{
     height: 70px;
     border-bottom: 2.5px solid white;
     background-color: black;
+    width: 100%;
+    z-index: 10;
+
 }
 
 .imagem-esquerda img{
     float: left;
     margin-left: 50px;
     width: 35px;
-
 }
+
 .imagem-direita{
     float: right;
     width: 25px;
@@ -40,10 +42,10 @@ body{
     background-color: #1a1a2e;
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
-    display: inline;
 }
 
 .box-caixa{
+    padding-top: 40px;
     height: 500px;
     margin: 0 auto;
     text-align: center;
@@ -63,7 +65,6 @@ body{
 }
 
 .box-login, .box-cadastro{
-    
     width: 330px;
     margin: -0 auto;
 }
@@ -97,6 +98,7 @@ body{
     font-family: 'Poppins', sans-serif;
 
 }
+
 .login .button:hover, .cadastro .button{
     opacity: 0.9;
 
@@ -136,42 +138,37 @@ body{
 .cad a:link {
     text-decoration:none;
 }
+
 .cad a:visited {
     text-decoration:none;
     color: whitesmoke;
 }
 
-footer{
-    margin-top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#footer{
+    text-align: center;
     width: 100%;
-    height: 70px;
+    height: 50px;
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
+    margin-top: 160px;
 }
 
-footer a{
+#footer a{
     text-decoration: none;
     color: #fff;
 }
-@media only screen and (max-width: 600px) {
-    header{ 
-        width: 100%;
-        height: 50px;
-        border-bottom: 2.5px solid white;
-        background-color: black;
-    }
-    .cabecalho img{
-        padding: 10px;
-    }
-    .imagem-esquerda img{
-        margin-left: 0px;
 
-    }
+@media only screen and (max-width: 700px) {
     .imagem-direita{
-        margin-right: 0px;
+        margin-top: -4px;
+        margin-right: 20px
     }
+
+    .imagem-esquerda img{
+        margin-top: -5px;
+
+        margin-left: 0px;
+    }
+    
 }

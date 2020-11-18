@@ -20,7 +20,6 @@ header{
     float: left;
     margin-left: 50px;
     width: 35px;
-
 }
 
 .imagem-direita{
@@ -104,25 +103,23 @@ body{
     height: 130px;
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#footer{
+    text-align: center;
     width: 100%;
-    bottom: 0;
-    height: 70px;
+    height: 50px;
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
+    margin-top: 40px;
 }
 
-footer a{
+#footer a{
     text-decoration: none;
     color: #fff;
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     .categorias{
         padding: 0px;
         padding-top: 30px;
@@ -131,6 +128,7 @@ footer a{
     .icone img{
         height: 20px;
     }
+
     .imagem-direita{
         margin-top: -4px;
         margin-right: 20px
@@ -141,10 +139,10 @@ footer a{
 
         margin-left: 0px;
     }
-
+    
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 501px) {
 
 .categorias{
       width: 380px;

@@ -6,31 +6,26 @@
     border: 0;
 }
 
-header{ 
-    width: 100%;
+header{
     height: 70px;
     border-bottom: 2.5px solid white;
     background-color: black;
+    position: fixed;
     width: 100%;
-}
-
-
-.cabecalho{
-    margin-right: 20px;
+    z-index: 10;
 
 }
 
-.imagem-esquerda{
+.imagem-esquerda img{
     float: left;
-    padding-left: 20px;
+    margin-left: 50px;
     width: 35px;
-
 }
 
 .imagem-direita{
     float: right;
     width: 25px;
-    padding-right: 20px;
+    margin-right: 50px;
 }
 
 .cabecalho img{
@@ -39,10 +34,10 @@ header{
     transition: transform .5s ease;
 }
 
-.cabecalho:hover img{
+.cabecalho:hover img:hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
- }
+}
 
 body{
     background-color: #1a1a2e;
@@ -60,6 +55,7 @@ body{
 }
 
 .box-caixa{
+    padding-top: 70px;
     height: 400px;
     margin: 0 auto;
     text-align: center;
@@ -100,20 +96,17 @@ h1{
     font-family: 'Poppins', sans-serif;
 }
 
-footer{
-    margin-top: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#footer{
+    text-align: center;
     width: 100%;
-    bottom: 0;
-    height: 70px;
+    height: 50px;
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
+    margin-top: 40px;
 }
 
-footer a{
+#footer a{
     text-decoration: none;
     color: #fff;
 }
