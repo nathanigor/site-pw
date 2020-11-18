@@ -10,7 +10,6 @@ header{
     height: 70px;
     border-bottom: 2.5px solid white;
     background-color: black;
-    position: fixed;
     width: 100%;
     z-index: 10;
 

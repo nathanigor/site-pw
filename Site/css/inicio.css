@@ -133,11 +133,10 @@ body{
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 #footer a{
-    flex: 1;
     text-decoration: none;
     color: #fff;
 }
