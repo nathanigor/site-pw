@@ -101,7 +101,7 @@ h1{
     border-top: 2.5px solid white;
     color: #fff;
     background-color: #000000;
-    margin-top: 260px;
+    margin-top: 270px;
 }
 
 #footer a{
@@ -110,6 +110,11 @@ h1{
 }
 
 @media only screen and (max-width: 700px) {
+
+    header{
+        height: 60px;
+    }
+
     .imagem-direita{
         margin-top: -4px;
         margin-right: 20px

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     border: 0;
@@ -102,7 +102,6 @@ body{
 }
 
 #footer a{
-    flex: 1;
     text-decoration: none;
     color: #fff;
 }
@@ -110,10 +109,7 @@ body{
 @media only screen and (max-width: 700px) {
 
     header{
-        width: 100%;
         height: 60px;
-        border-bottom: 2.5px solid white;
-        background-color: black;
     }
 
     .info{
@@ -126,12 +122,13 @@ body{
     }
 
     .imagem-direita{
-        margin-top: -5px;
+        margin-top: -4px;
         margin-right: 20px
     }
 
     .imagem-esquerda img{
         margin-top: -5px;
+
         margin-left: 0px;
     }
 

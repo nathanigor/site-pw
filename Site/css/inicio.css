@@ -18,7 +18,6 @@ header{
     position: fixed;
     width: 100%;
     z-index: 10;
-
 }
 
 .imagem-esquerda img{
@@ -84,6 +83,7 @@ body{
 .info img{
     margin: 0 auto;
     padding-top: 10px;
+    width: 100%;
     height: 50px;
 }
 
@@ -178,6 +178,11 @@ body{
 }
 
 @media only screen and (max-width: 700px) {
+
+    header{
+        height: 60px;
+    }
+
     .box{
         width: 100vw;
     }
