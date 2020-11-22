@@ -117,7 +117,6 @@ body{
     width: 300px;
     -webkit-transition: -webkit-transform .4s ease;
     transition: transform.5s ease;
-    border: 1.5px solid;
     border-radius: 8px;
 }
 

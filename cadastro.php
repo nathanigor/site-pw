@@ -1,3 +1,9 @@
+<?php
+    require_once './Crud/model/cliente.php';
+    $objCliente = new Cliente();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,21 +31,24 @@
             <h1>Cadastro do Cliente</h1>
         </div>
         <div class="box-cadastro">
-            <form action="" method="POST">
                 <div class="cadastro">
+                <form action="./Crud/controle/ctr_cliente.php" method="POST">
+                    <input type="hidden" name="insert">
                     <p>Nome:</p>
-                    <input class="nome" type="text" name="txtnome" placeholder="João Vitor" required>
+                    <input class="nome" type="text" name="txtNome" placeholder="João Vitor" maxlength="35" required>
                     <p>E-mail:</p>
-                    <input class="email" type="text" name="txtusario" placeholder="seuemail@email.com" required>
+                    <input class="email" type="email" name="txtEmail" placeholder="seuemail@email.com" maxlength="40" required>
+                    <p>Telefone:</p>
+                    <input class="telefone" type="text" name="txtTelefone" placeholder="xxxxxxxxxxx" maxlength="12" required>
                     <p>Senha:</p>
-                    <input class="senha" type="password" name="textsenha" placeholder="********" required>
-                    <input class="button" type="button" value="Entrar">
+                    <input class="senha" type="password" name="txtSenha" placeholder="********" maxlength="15" required>
+                    <input class="button" type="submit" value="Entrar">
                 </div>
                 <div class="redes">
                     <p>Fazer cadastro com:</p>
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-google"></a>
-                    <p class="cad">Já tem cadastro? <a href="./login.html">Entre</a> </p>
+                    <p class="cad">Já tem cadastro? <a href="./login.php">Entre</a> </p>
                 </div>
             </form>
         </div>

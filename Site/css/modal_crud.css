@@ -1,0 +1,138 @@
+
+h3{
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+label{
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+input{
+    width: 88%;
+    margin: 10px auto;
+    padding: 10px 24px;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1.5em;
+    color: #1a1a2e;
+}
+
+enviar{
+    font-size: 1.2em;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 24px;
+    border: 0;
+    outline: none;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: #1a1a2e;
+
+}
+
+.enviar:hover{
+    cursor: pointer;
+    background-color: #e3e3e6;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar{
+    display: flex;
+
+}
+
+.modal{
+    background: #1a1a2e;
+    width: 400px;
+    padding: 20px;
+    border: 4px solid whitesmoke;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar{
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid whitesmoke;
+    background: #1a1a2e;
+    color: whitesmoke;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+}
+@media only screen and (max-width: 601px) {
+    .fechar{
+        right: -10px;
+
+    }
+}
+
+.modal-tamanho{
+    display: flex;
+   padding-left: 35px;
+}
+.modal-valor{
+    text-align: center;
+}
+
+
+#IrParaCategorias {
+    margin-top: 35px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: #ff802b;
+    border-radius: 8px;
+    transition: 200ms;
+    font-size: 1.5em;
+}
+
+#IrParaCategorias:hover{
+    background-color: #e27125;
+    cursor: pointer;
+    
+}
+
+#modalButtons{
+    display: flex;
+    justify-content: space-around;
+}

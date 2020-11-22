@@ -1,3 +1,8 @@
+<?php
+    require_once './Crud/model/cliente.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,19 +31,20 @@
             <h1>Login do Cliente</h1>
         </div>
         <div class="box-login">
-            <form action="" method="POST">
+        <form action="./Crud/controle/ctr_login.php" method="POST">
                 <div class="login">
+                    <input type="hidden" name="login">
                     <p>E-mail:</p>
-                    <input class="email" type="text" name="txtusario" placeholder="seuemail@email.com" required>
+                    <input class="email" type="email" name="txtEmail" placeholder="seuemail@email.com" maxlength="40" >
                     <p>Senha:</p>
-                    <input class="senha" type="password" name="textsenha" placeholder="********" required>
-                    <input class="button" type="button" value="Entrar">
+                    <input class="senha" type="password" name="txtSenha" placeholder="********" maxlength="15" >
+                    <input class="button" type="submit" name="acessar" value="Acessar">
                 </div>
                 <div class="redes">
                     <p>Fazer login com:</p>
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-google"></a>
-                    <p class="cad">Não tem cadastro? <a href="./cadastro.html">Cadastre-se</a> </p>
+                    <p class="cad">Não tem cadastro? <a href="./cadastro.php">Cadastre-se</a> </p>
                 </div>
             </form>
         </div>
