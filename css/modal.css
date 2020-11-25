@@ -1,4 +1,3 @@
-
 h3{
     color: whitesmoke;
     text-align: center;
@@ -45,7 +44,7 @@ input {
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
-    top: 0px;
+    top: 10px;
     left: 0px;
     z-index: 2000;
     display: none;
@@ -60,11 +59,13 @@ input {
 
 .modal{
     background: #1a1a2e;
+    margin: 0 auto;
     width: 400px;
     padding: 20px;
     border: 4px solid whitesmoke;
     position: relative;
 }
+
 
 @keyframes modal {
     from {

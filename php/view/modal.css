@@ -1,4 +1,3 @@
-
 h3{
     color: whitesmoke;
     text-align: center;
@@ -11,7 +10,7 @@ label{
     font-size: 1.2em;
 }
 
-input{
+input {
     width: 88%;
     margin: 10px auto;
     padding: 10px 24px;
@@ -22,7 +21,7 @@ input{
     color: #1a1a2e;
 }
 
-enviar{
+#login{
     font-size: 1.2em;
     width: 100%;
     margin: 10px auto;
@@ -35,7 +34,7 @@ enviar{
 
 }
 
-.enviar:hover{
+#login:hover{
     cursor: pointer;
     background-color: #e3e3e6;
 }
@@ -45,7 +44,7 @@ enviar{
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
-    top: 0px;
+    top: 10px;
     left: 0px;
     z-index: 2000;
     display: none;
@@ -60,11 +59,13 @@ enviar{
 
 .modal{
     background: #1a1a2e;
+    margin: 0 auto;
     width: 400px;
     padding: 20px;
     border: 4px solid whitesmoke;
     position: relative;
 }
+
 
 @keyframes modal {
     from {
@@ -112,6 +113,24 @@ enviar{
     text-align: center;
 }
 
+#comprar{
+    margin-top: 35px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background-color: #32cd32;
+    border-radius: 8px;
+    transition: 200ms;
+    font-size: 1.5em;
+}
+
+#comprar:hover{
+    background-color: #11b811;
+    cursor: pointer;
+    
+}
 
 #IrParaCategorias {
     margin-top: 35px;

@@ -35,6 +35,26 @@
             }
         }
 
+        public function cadastro($nome, $email, $telefone, $senha) {
+            try {
+                $sql = "INSERT INTO cliente(nome, email, telefone, senha)
+                        VALUES (:nome, :email, :telefone, :senha)";
+
+                $stmt = $this -> conn -> prepare($sql);
+                
+                $stmt -> bindparam(":nome", $nome);
+                $stmt -> bindparam(":email", $email);
+                $stmt -> bindparam(":telefone", $telefone);
+                $stmt -> bindparam(":senha", md5($senha));
+                $stmt -> execute();
+                return $stmt;
+            } catch (PDOException $e) {
+                echo("Error: $e->getMessage()");
+            } finally {
+                $this -> conn = null;
+            }
+        }
+
 
         public function login($email, $senha){
             $sql = "SELECT * FROM cliente WHERE email AND senha
@@ -51,26 +71,24 @@
         }
 
 
-        public function update($nome, $email, $telefone, $senha, $id) {
+        public function update($nome, $email, $telefone, $id){
             try {
                 $sql = "UPDATE cliente
-                        SET nome = :nome,
-                        email = :email,
-                        telefone = :telefone,
-                        senha = :senha,
+                        SET NOME = :nome,
+                            email = :email,
+                            telefone = :telefone
                         WHERE id = :id";
-                $stmt = $this -> conn -> prepare($sql);
-                $stmt -> bindparam(":nome", $nome);
-                $stmt -> bindparam(":email", $email);
-                $stmt -> bindparam(":telefone", $telefone);
-                $stmt -> bindparam(":senha", md5($senha));
-                $stmt -> bindparam(":id", $id);
-                $stmt -> execute();
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindparam(":nome", $nome);
+                $stmt->bindparam(":email", $email);
+                $stmt->bindparam(":telefone", $telefone);
+                $stmt->bindparam(":id", $id);
+                $stmt->execute();
                 return $stmt;
-            } catch(PDOException $e) {
-                echo("Error: $e.getMessage()");
-            } finally {
-                $this -> conn = null;
+            }catch (PDOException $e) {
+                echo("Error: ".$e->getMessage());
+            }finally{
+                $this->conn = null;
             }
         }
 

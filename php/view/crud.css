@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: 0;
 }
@@ -42,7 +42,6 @@ body{
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
 }
-
 
 .box-caixa{
     padding-top: 40px;

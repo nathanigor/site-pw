@@ -11,9 +11,3 @@ function IniciarModal(modalID){
         })
     }
 }
-
-const adm = document.querySelector('.camisas');
-adm.addEventListener('click',function(){
-    IniciarModal('modal-valor');
-
-})
