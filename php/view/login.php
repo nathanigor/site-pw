@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./login.css">
-    <link rel="shortcut icon" href="./user-circle.svg">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="shortcut icon" href="./img/user-circle.svg">
     <title>Login</title>
 </head>
 
@@ -20,14 +20,14 @@
 
     <header>
         <div class="cabecalho">
-            <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./home.svg" title="Início"></a>
-            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./shopping-bag.svg" title="Categorias"></a>
+            <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./img/home.svg" title="Início"></a>
+            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./img/shopping-bag.svg" title="Categorias"></a>
         </div>
     </header>
 
     <div class="box-caixa">
         <div class="info">
-            <img src="./user-circle.svg" alt="icone_user">
+            <img src="./img/user-circle.svg" alt="icone_user">
             <h1>Login do Cliente</h1>
         </div>
         <div class="box-login">
@@ -52,8 +52,8 @@
 
     <div id="footer">
         <footer>
-            <p><a href="contato.html">Contato</a></p>
-            <P><a href="Sobre.html">Sobre</a></P>
+            <p><a href="/pw/login/site-pw/contato.html">Contato</a></p>
+            <P><a href="/pw/login/site-pw/Sobre.html">Sobre</a></P>
         </footer>
     </div>
     

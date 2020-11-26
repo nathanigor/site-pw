@@ -1,28 +1,31 @@
 <?php
     require_once 'db.php';
 
-    class Funcionario{
+    class Funcionario {
         private $conn = null;
 
-        public function __construct(){
+        public function __construct() {
             $database = new Database();
             $db = $database -> dbConnection();
             $this -> conn = $db;
         }
 
         public function runQuery($sql) {
-            $stmt =  $this -> conn ->prepare($sql);
+            $stmt = $this -> conn -> prepare($sql);
             return $stmt;
         }
-        public function insert($nome, $cpf, $sexo) {
-            try{
-                $sql = "INSERT INTO funcionario(nome, cpf, sexo)
-                        VALUES (:nome, :cpf)";
+
+        public function insert($nome, $cpf, $telefone) {
+            try {
+                $sql = "INSERT INTO Funcionario(nome, cpf, telefone)
+                        VALUES (:nome, :cpf, :telefone)";
+
                 $stmt = $this -> conn -> prepare($sql);
+                
                 $stmt -> bindparam(":nome", $nome);
                 $stmt -> bindparam(":cpf", $cpf);
-                $stmt -> bindparam(":sexo", $sexo);
-
+                $stmt -> bindparam(":telefone", $telefone);
+                $stmt -> execute();
                 return $stmt;
             } catch (PDOException $e) {
                 echo("Error: $e->getMessage()");
@@ -31,24 +34,46 @@
             }
         }
 
-        public function update($nome, $cpf, $id, $sexo) {
+        public function cadastro($nome, $cpf, $telefone) {
             try {
-                $sql = "UPDATE funcionario
-                        SET nome = :nome,
-                        cpf = :cpf,
-                        WHERE id = :id";
+                $sql = "INSERT INTO funcionario(nome, cpf, telefone)
+                        VALUES (:nome, :cpf, :telefone)";
+
                 $stmt = $this -> conn -> prepare($sql);
+                
                 $stmt -> bindparam(":nome", $nome);
                 $stmt -> bindparam(":cpf", $cpf);
-                $stmt -> bindparam(":id", $id);
-                $stmt -> bindparam(":sexo", $sexo);
-
+                $stmt -> bindparam(":telefone", $telefone);
                 $stmt -> execute();
                 return $stmt;
-            } catch(PDOException $e) {
-                echo("Error: $e.getMessage()");
+            } catch (PDOException $e) {
+                echo("Error: $e->getMessage()");
             } finally {
                 $this -> conn = null;
+            }
+        }
+
+
+
+
+        public function update($nome, $cpf, $telefone, $id){
+            try {
+                $sql = "UPDATE funcionario
+                        SET NOME = :nome,
+                        telefone = :telefone,
+                            cpf = :cpf
+                        WHERE id = :id";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->bindparam(":nome", $nome);
+                $stmt->bindparam(":cpf", $cpf);
+                $stmt->bindparam(":telefone", $telefone);
+                $stmt->bindparam(":id", $id);
+                $stmt->execute();
+                return $stmt;
+            }catch (PDOException $e) {
+                echo("Error: ".$e->getMessage());
+            }finally{
+                $this->conn = null;
             }
         }
 
