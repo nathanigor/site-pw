@@ -1,7 +1,7 @@
 <?php
     require_once 'db.php';
 
-    class Funcionario {
+    class Produto {
         private $conn = null;
 
         public function __construct() {
@@ -15,16 +15,17 @@
             return $stmt;
         }
 
-        public function insert($nome, $cpf, $telefone) {
+        public function insert($nome, $valor, $tamanho, $descricao, $quantidade) {
             try {
-                $sql = "INSERT INTO funcionario(nome, cpf, telefone)
-                        VALUES (:nome, :cpf, :telefone)";
+                $sql = "INSERT INTO produto(nome, valor, tamanho, descricao, quantidade)
+                        VALUES (:nome, :valor, :tamanho, :descricao, :quantidade)";
 
                 $stmt = $this -> conn -> prepare($sql);
-                
                 $stmt -> bindparam(":nome", $nome);
-                $stmt -> bindparam(":cpf", $cpf);
-                $stmt -> bindparam(":telefone", $telefone);
+                $stmt -> bindparam(":valor", $valor);
+                $stmt -> bindparam(":tamanho", $tamanho);
+                $stmt -> bindparam(":descricao", $descricao);
+                $stmt -> bindparam(":quantidade", $quantidade);
                 $stmt -> execute();
                 return $stmt;
             } catch (PDOException $e) {
@@ -34,17 +35,21 @@
             }
         }
 
-        public function update($nome, $cpf, $telefone, $id){
+        public function update($nome, $valor, $tamanho, $descricao, $quantidade, $id){
             try {
-                $sql = "UPDATE funcionario
+                $sql = "UPDATE produto
                         SET nome = :nome,
-                        cpf  = :cpf,
-                        telefone = :telefone
+                        valor  = :valor,
+                        tamanho = :tamanho,
+                        descricao  = :descricao,
+                        quantidade = :quantidade
                         WHERE id = :id";
                 $stmt = $this->conn->prepare($sql);
                 $stmt->bindparam(":nome", $nome);
-                $stmt->bindparam(":cpf", $cpf);
-                $stmt->bindparam(":telefone", $telefone);
+                $stmt->bindparam(":valor", $valor);
+                $stmt->bindparam(":tamanho", $tamanho);
+                $stmt->bindparam(":descricao", $descricao);
+                $stmt -> bindparam(":quantidade", $quantidade);
                 $stmt->bindparam(":id", $id);
                 $stmt->execute();
                 return $stmt;
@@ -57,7 +62,7 @@
 
         public function delete($id) {
             try {
-                $sql = "DELETE FROM funcionario WHERE id = :id";
+                $sql = "DELETE FROM produto WHERE id = :id";
                 $stmt = $this -> conn -> prepare($sql);
                 $stmt -> bindparam(":id", $id);
                 $stmt -> execute();

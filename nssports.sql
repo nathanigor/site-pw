@@ -28,7 +28,33 @@ CREATE TABLE `cliente` (
   `senha` varchar(32) NOT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `email` (`email`,`senha`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4;
+
+/*Table structure for table `funcionario` */
+
+DROP TABLE IF EXISTS `funcionario`;
+
+CREATE TABLE `funcionario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
+  `cpf` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+
+/*Table structure for table `produto` */
+
+DROP TABLE IF EXISTS `produto`;
+
+CREATE TABLE `produto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `valor` varchar(100) NOT NULL,
+  `tamanho` char(1) NOT NULL,
+  `quantidade` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

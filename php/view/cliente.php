@@ -22,8 +22,9 @@
 
     <header>
         <div class="cabecalho">
-        <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./img/home.svg" title="Início"></a>
-            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./img/shopping-bag.svg" title="Categorias"></a>
+            <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./img/home.svg" title="Início"></a>
+            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./img/shopping-bag.svg"
+                    title="Categorias"></a>
             <a class="imagem-direita" href="./login.php"><img src="./img/user.svg" title="Usuário"></a>
         </div>
     </header>
@@ -34,11 +35,14 @@
             <button type="button" class="novo" data-toggle="modal" data-target="#myModalCadastrar">
                 <span></span>Adicionar Cliente
             </button>
-
-           <a href="funcionario.php">
-               <button type="button" class="novo">
-               <span></span>Adicionar Funcionario</button>
-           </a> 
+            <a href="funcionario.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Funcionario</button>
+            </a>
+            <a href="produto.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Produto</button>
+            </a>
         </p>
         <table class="cliente">
             <thead>
@@ -62,7 +66,6 @@
                     <td><?php echo($rowCliente['nome']);?></td>
                     <td><?php echo($rowCliente['email']);?></td>
                     <td><?php echo($rowCliente['telefone']);?></td>
-
                     <td>
                         <p>
                             <button type="button">
@@ -80,9 +83,9 @@
                         <p>
                             <button type="button">
                                 <span data-toggle="modal" data-target="#myModalDeletar"
-                                      data-clienteid="<?php print $rowCliente['id']; ?>"
-                                      data-clientenome="<?php print $rowCliente['nome']; ?>"><img class="excluir"
-                                      src="./img/user-times.svg" title="Excluir Usuário">
+                                    data-clienteid="<?php print $rowCliente['id']; ?>"
+                                    data-clientenome="<?php print $rowCliente['nome']; ?>"><img class="excluir"
+                                        src="./img/user-times.svg" title="Excluir Usuário">
                                 </span>
                             </button>
                         </p>
@@ -106,11 +109,13 @@
                 <input type="hidden" name="insert">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="txtNome" placeholder="João Vitor" maxlength="35" required>
+                    <input type="text" class="form-control" id="nome" name="txtNome" placeholder="João Vitor"
+                        maxlength="35" required>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="text" class="form-control" id="email" name="txtEmail" placeholder="seuemail@email.com" maxlength="40" required>
+                    <input type="text" class="form-control" id="email" name="txtEmail" placeholder="seuemail@email.com"
+                        maxlength="40" required>
                     <div class="form-group">
                         <p>Telefone:</p>
                         <input class="telefone" type="text" name="txtTelefone" placeholder="xxxxxxxxxxx" maxlength="12"
@@ -123,7 +128,7 @@
                     </div>
 
                 </div>
-                <button class="novo" type="submit">Enviar</button>
+                <button class="submit" type="submit">Enviar</button>
             </form>
         </div>
     </div>
@@ -132,46 +137,46 @@
         <div class="modal">
             <button class="fechar">X</button>
             <div class="modal-content">
-                    <h4 class="modal-title">Editar Cliente</h4>
-                </div>
-                <form action="../controller/ctr_cliente.php" method="POST">
-                    <input type="hidden" name="delete_id" value="" id="recipient-id">
+                <h4 class="modal-title">Editar Cliente</h4>
+            </div>
+            <form action="../controller/ctr_cliente.php" method="POST">
+                <input type="hidden" name="delete_id" value="" id="recipient-id">
                 <div class="form-group">
                     <label for="nome">Nome do Usuário</label>
                     <input type="text" class="form-control" id="recipient-nome" name="txtNome" readonly>
                 </div>
-                <button type="submit">Deletar</button>
+                <button class="submit" type="submit">Deletar</button>
             </form>
         </div>
     </div>
 
-        <!-- Modal Editar-->
-        <div class="modal-container" id="myModalEditar">
-            <div class="modal">
-                <button class="fechar">X</button>
-                <div class="modal-content">
-                    <h4 class="modal-title">Editar Cliente</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="../controller/ctr_cliente.php" method="POST">
-                        <input type="hidden" name="editar_id" id="recipient-id">
-                        <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="recipient-nome" name="txtNome">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="recipient-email" name="txtEmail">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="recipient-telefone" name="txtTelefone">
-                        </div>
-                        <button type="submit">Editar</button>
-                    </form>
-                </div>
+    <!-- Modal Editar-->
+    <div class="modal-container" id="myModalEditar">
+        <div class="modal">
+            <button class="fechar">X</button>
+            <div class="modal-content">
+                <h4 class="modal-title">Editar Cliente</h4>
+            </div>
+            <div class="modal-body">
+                <form action="../controller/ctr_cliente.php" method="POST">
+                    <input type="hidden" name="editar_id" id="recipient-id">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="recipient-nome" name="txtNome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="recipient-email" name="txtEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control" id="recipient-telefone" name="txtTelefone">
+                    </div>
+                    <button class="submit" type="submit">Editar</button>
+                </form>
             </div>
         </div>
+    </div>
 
     <script>
     $('#myModalDeletar').on('show.bs.modal', function(event) {

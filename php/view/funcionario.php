@@ -22,8 +22,9 @@
 
     <header>
         <div class="cabecalho">
-        <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./img/home.svg" title="Início"></a>
-            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./img/shopping-bag.svg" title="Categorias"></a>
+            <a class="imagem-esquerda" href="/pw/login/site-pw/index.html"><img src="./img/home.svg" title="Início"></a>
+            <a class="imagem-direita" href="/pw/login/site-pw/categorias.html"><img src="./img/shopping-bag.svg"
+                    title="Categorias"></a>
             <a class="imagem-direita" href="./login.php"><img src="./img/user.svg" title="Usuário"></a>
         </div>
     </header>
@@ -32,19 +33,23 @@
         <h2>Funcionarios</h2>
         <p>
             <a href="cliente.php">
-            <button type="button" class="novo">
-                <span></span>Adicionar Cliente</button>
+                <button type="button" class="novo">
+                    <span></span>Adicionar Cliente</button>
             </a>
-            <button type="button" class="novo"data-toggle="modal" data-target="#myModalCadastrar">
-               <span></span>Adicionar Funcionario
+            <button type="button" class="novo" data-toggle="modal" data-target="#myModalCadastrar">
+                <span></span>Adicionar Funcionario
             </button>
+            <a href="produto.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Produto</button>
+            </a>
         </p>
-        <table class="cliente">
+        <table class="funcionario">
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Telefone</th>
                     <th>Cpf</th>
+                    <th>Telefone</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,17 +64,16 @@
 
                 <tr>
                     <td><?php echo($rowFuncionario['nome']);?></td>
-                    <td><?php echo($rowFuncionario['telefone']);?></td>
                     <td><?php echo($rowFuncionario['cpf']);?></td>
-
+                    <td><?php echo($rowFuncionario['telefone']);?></td>
                     <td>
                         <p>
                             <button type="button">
                                 <span data-toggle="modal" data-target="#myModalEditar"
                                     data-funcionarioid="<?php echo $rowFuncionario['id']; ?>"
                                     data-funcionarionome="<?php echo $rowFuncionario['nome']; ?>"
-                                    data-funcionariotelefone="<?php echo $rowFuncionario['telefone']; ?>"
-                                    data-funcionariocpf="<?php echo $rowFuncionario['cpf']; ?>">
+                                    data-funcionariocpf="<?php echo $rowFuncionario['cpf']; ?>"
+                                    data-funcionariotelefone="<?php echo $rowFuncionario['telefone']; ?>">
                                     <img class="editar" src="./img/user-plus.svg" title="Editar Funcionário">
                                 </span>
                             </button>
@@ -79,9 +83,9 @@
                         <p>
                             <button type="button">
                                 <span data-toggle="modal" data-target="#myModalDeletar"
-                                      data-funcionarioid="<?php print $rowFuncionario['id']; ?>"
-                                      data-funcionarionome="<?php print $rowFuncionario['nome']; ?>">
-                                      <img class="excluir" src="./img/user-times.svg" title="Excluir Funcionário">
+                                    data-funcionarioid="<?php print $rowFuncionario['id']; ?>"
+                                    data-funcionarionome="<?php print $rowFuncionario['nome']; ?>">
+                                    <img class="excluir" src="./img/user-times.svg" title="Excluir Funcionário">
                                 </span>
                             </button>
                         </p>
@@ -105,16 +109,19 @@
                 <input type="hidden" name="insert">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="txtNome" placeholder="João Vitor" maxlength="35" required>
+                    <input type="text" class="form-control" id="nome" name="txtNome" placeholder="João Vitor"
+                        maxlength="35" required>
                 </div>
                 <div class="form-group">
                     <label for="cpf">Cpf</label>
-                    <input type="text" class="form-control" id="cpf" name="txtCpf" placeholder="000.000.000-05" maxlength="14" required>
+                    <input type="text" class="form-control" id="cpf" name="txtCpf" placeholder="000.000.000-05"
+                        maxlength="14" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="telefone">telefone</label>
-                    <input class="telefone" type="text" name="txtTelefone" placeholder="xxxxxxxxxxx" maxlength="12" required>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone"  name="txtTelefone" placeholder="xxxxxxxxxxx" maxlength="12"
+                        required>
                 </div>
                 <button class="novo" type="submit">Enviar</button>
             </form>
@@ -125,10 +132,10 @@
         <div class="modal">
             <button class="fechar">X</button>
             <div class="modal-content">
-                    <h4 class="modal-title">Editar Funcionário</h4>
-                </div>
-                <form action="../controller/ctr_funcionario.php" method="POST">
-                    <input type="hidden" name="delete_id" value="" id="recipient-id">
+                <h4 class="modal-title">Editar Funcionário</h4>
+            </div>
+            <form action="../controller/ctr_funcionario.php" method="POST">
+                <input type="hidden" name="delete_id" value="" id="recipient-id">
                 <div class="form-group">
                     <label for="nome">Nome do Funcionário</label>
                     <input type="text" class="form-control" id="recipient-nome" name="txtNome" readonly>
@@ -138,33 +145,33 @@
         </div>
     </div>
 
-        <!-- Modal Editar-->
-        <div class="modal-container" id="myModalEditar">
-            <div class="modal">
-                <button class="fechar">X</button>
-                <div class="modal-content">
-                    <h4 class="modal-title">Editar Funcionario</h4>
-                </div>
-                <div class="modal-body">
+    <!-- Modal Editar-->
+    <div id="myModalEditar" class="modal-container" >
+        <div class="modal">
+            <button class="fechar">X</button>
+            <div class="modal-content">
+                <h4 class="modal-title">Editar Funcionário</h4>
+            </div>
+            <div class="modal-body">
                 <form action="../controller/ctr_funcionario.php" method="POST">
                     <input type="hidden" name="editar_id" id="recipient-id">
-                        <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="recipient-nome" name="txtNome">
-                        </div>
-                        <div class="form-group">
-                            <label for="cpf">Cpf</label>
-                            <input type="text" class="form-control" id="recipient-cpf" name="txtCpf">
-                        </div>
-                        <div class="form-group">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="recipient-nome" name="txtNome">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">Cpf</label>
+                        <input type="text" class="form-control" id="recipient-cpf" name="txtCpf">
+                    </div>
+                    <div class="form-group">
                         <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" id="recipient-telefone" name="txtTelefone">
-                        </div>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
+                        <input type="text" class="form-control" id="recipient-telefone" name="txtTelefone" maxlength="12">
+                    </div>
+                    <button type="submit">Editar</button>
+                </form>
             </div>
         </div>
+    </div>
 
     <script>
     $('#myModalDeletar').on('show.bs.modal', function(event) {
@@ -193,7 +200,7 @@
         modal.find('#recipient-nome').val(recipientnome);
         modal.find('#recipient-telefone').val(recipienttelefone);
         modal.find('#recipient-cpf').val(recipientcpf);
-    })
+    });
     </script>
 
     </div>

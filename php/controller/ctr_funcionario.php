@@ -21,9 +21,9 @@
     if(isset($_POST['editar_id'])){
         $id = $_POST['editar_id'];
         $nome = $_POST['txtNome'];
+        $cpf = $_POST['txtCpf'];
         $telefone = $_POST['txtTelefone'];
-        $cpf = $_POST['txtCPF'];
-        if ($objFuncionario->update($nome, $telefone, $cpf, $id)) {
+        if ($objFuncionario->update($nome, $cpf, $telefone,  $id)) {
             $objFuncionario->redirect('/pw/login/site-pw/php/view/funcionario.php');
         }
     }
