@@ -69,7 +69,7 @@
                     <td><?php echo($rowProduto['nome']);?></td>
                     <td><?php echo($rowProduto['descricao']);?></td>
                     <td><?php echo($rowProduto['tamanho']);?></td>
-                    <td><?php echo($rowProduto['valor']);?></td>
+                    <td><?php echo number_format($rowProduto['valor'],2,"," , ".");?></td>
                     <td><?php echo($rowProduto['quantidade']);?></td>
                     <td>
                         <p>
@@ -78,7 +78,7 @@
                                     data-produtoid="<?php echo $rowProduto['id']; ?>"
                                     data-produtonome="<?php echo $rowProduto['nome']; ?>"
                                     data-produtotamanho="<?php echo $rowProduto['tamanho']; ?>"
-                                    data-produtovalor="<?php echo $rowProduto['valor']; ?>" 
+                                    data-produtovalor="<?php echo number_format($rowProduto['valor'],2,"," , "."); ?>"
                                     data-produtodescricao="<?php echo $rowProduto['descricao']; ?>"
                                     data-produtoquantidade="<?php echo $rowProduto['quantidade']; ?>">
                                     <img class="editar" src="./img/user-plus.svg" title="Editar Produto">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="form-group">
                     <label for="valor">Valor</label>
-                    <input type="text" class="form-control" id="valor" name="txtValor" placeholder="R$:120,00" required>
+                    <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" id="valor" name="txtValor" placeholder="R$:120,00" required>
                 </div>
                 <div class="form-group">
                     <label for="tamanho">Tamanho</label>
@@ -180,7 +180,7 @@
                     </div>
                     <div class="form-group">
                         <label for="valor">Valor</label>
-                        <input type="text" class="form-control" id="recipient-valor" name="txtValor" maxlength="12">
+                        <input type="number" max="10000.00" step="0.01" class="form-control" id="recipient-valor" name="txtValor" maxlength="12">
                     </div>
                     <div class="form-group">
                         <label for="tamanho">Tamanho</label>
