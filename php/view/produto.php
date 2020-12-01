@@ -180,7 +180,7 @@
                     </div>
                     <div class="form-group">
                         <label for="valor">Valor</label>
-                        <input type="number" max="10000.00" step="0.01" class="form-control" id="recipient-valor" name="txtValor" maxlength="12">
+                        <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" id="recipient-valor" name="txtValor" maxlength="12">
                     </div>
                     <div class="form-group">
                         <label for="tamanho">Tamanho</label>
