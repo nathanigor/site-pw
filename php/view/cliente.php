@@ -43,13 +43,21 @@
                 <button type="button" class="novo">
                     <span></span>Adicionar Produto</button>
             </a>
+            <a href="venda.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Venda</button>
+            </a>
         </p>
         <table class="cliente">
             <thead>
                 <tr>
+                    <th>Última alteração</th>
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>Telefone</th>
+                    <th>Senha</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,9 +71,11 @@
                 ?>
 
                 <tr>
+                    <td><?php echo($rowCliente['datacad']);?></td>
                     <td><?php echo($rowCliente['nome']);?></td>
                     <td><?php echo($rowCliente['email']);?></td>
                     <td><?php echo($rowCliente['telefone']);?></td>
+                    <td><?php echo($rowCliente['senha']);?></td>
                     <td>
                         <p>
                             <button type="button">

@@ -31,7 +31,7 @@
             <h1>Login do Cliente</h1>
         </div>
         <div class="box-login">
-        <form action="./Crud/controle/ctr_login.php" method="POST">
+        <form action="" method="POST">
                 <div class="login">
                     <input type="hidden" name="login">
                     <p>E-mail:</p>

@@ -43,13 +43,21 @@
                 <button type="button" class="novo">
                     <span></span>Adicionar Produto</button>
             </a>
+            <a href="venda.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Venda</button>
+            </a>
         </p>
         <table class="funcionario">
             <thead>
                 <tr>
+                    <th>Última alteração</th>
+                    <th>ID</th>
                     <th>Nome</th>
                     <th>Cpf</th>
                     <th>Telefone</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,6 +71,8 @@
                 ?>
 
                 <tr>
+                    <td><?php echo($rowFuncionario['datacad']);?></td>
+                    <td><?php echo($rowFuncionario['id']);?></td>
                     <td><?php echo($rowFuncionario['nome']);?></td>
                     <td><?php echo($rowFuncionario['cpf']);?></td>
                     <td><?php echo($rowFuncionario['telefone']);?></td>

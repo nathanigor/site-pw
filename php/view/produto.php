@@ -44,15 +44,22 @@
             <button type="button" class="novo" data-toggle="modal" data-target="#myModalCadastrar">
                 <span></span>Adicionar Produto
             </button>
+            <a href="venda.php">
+                <button type="button" class="novo">
+                    <span></span>Adicionar Venda</button>
+            </a>
         </p>
         <table class="Produto">
             <thead>
                 <tr>
+                    <th>Última alteração</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Tamanho</th>
                     <th>Valor</th>
                     <th>Quantidade</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,6 +73,7 @@
                 ?>
 
                 <tr>
+                    <td><?php echo($rowProduto['datacad']);?></td>
                     <td><?php echo($rowProduto['nome']);?></td>
                     <td><?php echo($rowProduto['descricao']);?></td>
                     <td><?php echo($rowProduto['tamanho']);?></td>
@@ -78,7 +86,7 @@
                                     data-produtoid="<?php echo $rowProduto['id']; ?>"
                                     data-produtonome="<?php echo $rowProduto['nome']; ?>"
                                     data-produtotamanho="<?php echo $rowProduto['tamanho']; ?>"
-                                    data-produtovalor="<?php echo number_format($rowProduto['valor'],2,"," , "."); ?>"
+                                    data-produtovalor="<?php echo $rowProduto['valor']; ?>"
                                     data-produtodescricao="<?php echo $rowProduto['descricao']; ?>"
                                     data-produtoquantidade="<?php echo $rowProduto['quantidade']; ?>">
                                     <img class="editar" src="./img/user-plus.svg" title="Editar Produto">

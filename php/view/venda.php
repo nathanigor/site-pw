@@ -50,24 +50,7 @@
     </header>
 
     <div class="box-caixa">
-        <h2>Produtos</h2>
-        <p>
-            <a href="cliente.php">
-                <button type="button" class="novo">
-                    <span></span>Adicionar Cliente</button>
-            </a>
-            <a href="funcionario.php">
-                <button type="button" class="novo">
-                    <span></span>Adicionar Funcionario
-                </button>
-            </a>
-            <a href="produto.php">
-                <button type="button" class="novo">
-                    <span></span>Adicionar Produto
-                </button>
-            </a>
-        </p>
-        <div class="box-caixa">
+        <h2>Venda</h2>
             <table class="Produto">
                 <h2>Produtos Disponíveis</h2>
                 <thead>
@@ -114,11 +97,14 @@
                     <th>Valor</th>
                     <th>Quantidade</th>
                     <th>Ação</th>
+                    <th>Subtotal</th>
+
                 </tr>
             </thead>
             <?php
             $Total = 0;
             $QuantiProdutos = 0;
+            $SubTotal = 0;
         foreach($_SESSION['venda'] as $Prod => $Quantidade):
             $link = mysqli_connect("localhost", "root", "", "nssports");
             $SqlCarrinho = mysqli_query($link, "SELECT * FROM produto Where id = '$Prod' ");
@@ -129,6 +115,8 @@
                 echo '<td>'.number_format($ResAssoc['valor'],2,",",".").'</td>';
                 echo '<td>'.$Quantidade.'</td>';
                 echo '<td><a  href="venda.php?del='.$ResAssoc['id'].'"><img src="./img/trash-alt.svg" width="20px" alt=""></a></td>';
+                $SubTotal += $ResAssoc['valor'] * $Quantidade;
+                echo '<td colspan="4">'.'R$: '.number_format($SubTotal,2,",",".").'</td>';
                 $Total += $ResAssoc['valor'] * $Quantidade;
                 $QuantiProdutos += $Quantidade;
             echo '</tr>';
@@ -160,5 +148,10 @@
             <input type="submit" name="enviar" value="Finalizar Pedido" />
         </form>
     </div>
-
+    <div id="footer">
+        <footer>
+            <p><a href="/pw/login/site-pw/contato.html">Contato</a></p>
+            <P><a href="/pw/login/site-pw/Sobre.html">Sobre</a></P>
+        </footer>
+    </div>
 </html>
