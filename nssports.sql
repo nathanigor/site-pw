@@ -26,6 +26,7 @@ CREATE TABLE `cliente` (
   `email` varchar(40) NOT NULL,
   `telefone` varchar(12) NOT NULL,
   `senha` varchar(32) NOT NULL,
+  `datacad` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`),
   FULLTEXT KEY `email` (`email`,`senha`)
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4;
@@ -39,8 +40,22 @@ CREATE TABLE `funcionario` (
   `nome` varchar(100) NOT NULL,
   `telefone` varchar(100) NOT NULL,
   `cpf` varchar(100) NOT NULL,
+  `datacad` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+
+/*Table structure for table `itensvendas` */
+
+DROP TABLE IF EXISTS `itensvendas`;
+
+CREATE TABLE `itensvendas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_venda` varchar(10) DEFAULT NULL,
+  `id_prod` varchar(10) NOT NULL,
+  `qtd` varchar(10) NOT NULL,
+  `datacad` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
 
 /*Table structure for table `produto` */
 
@@ -53,8 +68,9 @@ CREATE TABLE `produto` (
   `valor` float NOT NULL,
   `tamanho` char(1) NOT NULL,
   `quantidade` int(10) NOT NULL,
+  `datacad` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
 /*Table structure for table `venda` */
 
@@ -63,10 +79,9 @@ DROP TABLE IF EXISTS `venda`;
 CREATE TABLE `venda` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `valor` float NOT NULL,
-  `nome` text NOT NULL,
-  `quantidade` int(10) NOT NULL,
+  `datacad` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb4;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

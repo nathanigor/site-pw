@@ -117,31 +117,39 @@
                 </tr>
             </thead>
             <?php
-
+            $Total = 0;
+            $QuantiProdutos = 0;
         foreach($_SESSION['venda'] as $Prod => $Quantidade):
             $link = mysqli_connect("localhost", "root", "", "nssports");
             $SqlCarrinho = mysqli_query($link, "SELECT * FROM produto Where id = '$Prod' ");
             $ResAssoc = mysqli_fetch_assoc($SqlCarrinho);
+
             echo'<tr>';
                 echo '<td>'.$ResAssoc['nome'].'</td>';
                 echo '<td>'.number_format($ResAssoc['valor'],2,",",".").'</td>';
                 echo '<td>'.$Quantidade.'</td>';
-                echo '<td><a href="venda.php?del='.$ResAssoc['id'].'">X</a></td>';
+                echo '<td><a  href="venda.php?del='.$ResAssoc['id'].'"><img src="./img/trash-alt.svg" width="20px" alt=""></a></td>';
                 $Total += $ResAssoc['valor'] * $Quantidade;
+                $QuantiProdutos += $Quantidade;
             echo '</tr>';
+
         endforeach;
         echo '<tr>';
+            echo '<td colspan="4">'.'Quantidade Total de Produtos: '.$QuantiProdutos.'</td>';
             echo '<td colspan="4">'.'Total R$: '.number_format($Total,2,",",".").'</td>';
         echo '</tr>';
+
     ?>
-    <?php
+            <?php
+            
         if(isset($_POST['enviar'])){
             $link = mysqli_connect("localhost", "root", "", "nssports");
-            $SqlInsertVenda = mysqli_query($link,"INSERT INTO venda(valor) Values ('$Total')");
+            $SqlInserirVenda = mysqli_query($link,"INSERT INTO venda(valor) Values ('$Total')");
+            $idvenda = mysqli_insert_id($link);
 
-            foreach($_SESSION['venda'] as $ProdInsert => $Quant):   
-
-                $SqlInserirItens = "INSERT INTO venda(nome, quantidade) Values ('$nome','$Quant')";
+            foreach($_SESSION['venda'] as $ProdInsert => $Qtd):
+                
+                $SqlInserirItens = mysqli_query($link,"INSERT INTO itensvendas(id_venda, id_prod, qtd) Values ('$idvenda','$ProdInsert','$Qtd')");
 
             endforeach;
             echo "<script>alert('Venda concluida com sucesso!!')</script>";
@@ -149,7 +157,7 @@
     ?>
         </table>
         <form action="" enctype="multipart/form-data" method="post">
-            <input type="submit" name="enviar" value="Finalizar Pedido"/>
+            <input type="submit" name="enviar" value="Finalizar Pedido" />
         </form>
     </div>
 
